@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <Compile Remove="Src\Map\House.Move.cs" />
+    <Compile Remove="Src\Text\Language.Helpers.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Src\Map\House.Move.cs" />
+    <None Include="Src\Text\Language.Helpers.cs" />
   </ItemGroup>
 
 </Project>
