@@ -42,6 +42,22 @@ public class Room : IInvertory
 
         sb.Append(description);
 
+        if(_invertory.Total > 0)
+        {
+
+            var items = _invertory.InvertoryList;
+
+            var pluralPre = items.Length > 1 ? Text.Language.Are : Text.Language.Is;
+
+            var pluralPost = items.Length > 1 ? Text.Language.Plural : "";
+
+            sb.Append(string.Format(Text.Language.TotalItems, pluralPre, items.Length, pluralPost));
+
+            sb.Append(Text.Language.JoinedWordList(items, Text.Language.And) + Text.Language.Period);
+
+        }
+
+
         return sb.ToString();
     }
 

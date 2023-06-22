@@ -14,6 +14,8 @@ public class Chest : Item, IInvertory
     {
         CanTake = false;
         _house = house;
+        _invertory = new Invertory();
+
         foreach (var item in items)
         {
             Add(item);
